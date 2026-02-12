@@ -1,0 +1,29 @@
+#search-area {
+    margin-top: 5VH;
+    margin-bottom: 3vh;
+    display: flex;
+    gap: 2vw;
+    margin-left: 15px;
+}
+input {
+    height: 30px;
+    border-radius: 6px;
+    padding: 0 1rem;
+}
+
+#search-area button {
+    height: 30px;
+    padding: 0 1rem;
+}
+
+#attecks-s {
+    width:40px;
+    font-size: 1rem;
+    border-radius: 6px;
+    padding: 0;
+}
+
+#search-area select {
+    height: 30px;
+    border-radius: 6px;
+}

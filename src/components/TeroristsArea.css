@@ -1,0 +1,21 @@
+#terorists-area {
+    margin-top: 2vh;
+}
+
+table, th, td {
+  border:1px solid black;
+  width: 100%;
+  width: fit-content;
+  padding: 1vw;
+}
+
+
+td{
+    width: fit-content;
+}
+
+.name-area {
+    display: flex;
+    width: 100%;
+    gap: 2vw;
+}
