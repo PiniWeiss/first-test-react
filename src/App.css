@@ -1,8 +1,244 @@
-main {
-  margin-top:3vh;
-  background-color: rgb(181, 181, 187);
-  height: 100%;
-  width: 90vw;
+/* App.css - עיצוב כולל למערכת */
+
+:root {
+  --primary-dark: #1a2a3a;
+  --accent-blue: #3498db;
+  --danger-red: #e74c3c;
+  --success-green: #27ae60;
+  --warning-orange: #f39c12;
+  --bg-light: #f4f7f6;
+  --text-main: #2c3e50;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- Header --- */
+header {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+/* --- Search Area --- */
+#search-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  align-items: flex-end;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#status-area select {
+  padding: 0;
+  
+}
+
+#search-area input, #search-area  {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+#search-area input:focus {
+  border-color: var(--accent-blue);
+}
+
+.btn-find {
+  background-color: var(--danger-red);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-find:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* --- Table Styles --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+thead {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+/* --- Row Animations --- */
+.row-animate {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.row-animate:hover {
+  background-color: #f1f8ff;
+  transform: scale(1.01);
+}
+
+.highlight {
+  background-color: #fff0f0 !important;
+  border: 2px solid var(--danger-red);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+}
+
+/* --- Images & Badges --- */
+.name-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.name-area img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.name-area h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.status-tag {
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-tag.active { background: #ffdada; color: #a94442; }
+.status-tag.quiet { background: #fff3cd; color: #856404; }
+.status-tag.dead { background: #e2e3e5; color: #383d41; }
+.status-tag.agent { background: #d1ecf1; color: #0c5460; }
+
+.summary-cell {
+  font-size: 0.85rem;
+  color: #666;
+  max-width: 300px;
+}
+
+/* --- Bonus Panel (Bottom) --- */
+.bottom-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border-radius: 20px 20px 0 0;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.action-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.action-box {
+  flex: 1;
+  padding: 15px;
   border-radius: 10px;
-  padding: 1vw;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.action-box h3 { margin-top: 0; color: var(--primary-dark); }
+
+.weapon-select {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.recruit-btn {
+  background-color: var(--success-green);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recruit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

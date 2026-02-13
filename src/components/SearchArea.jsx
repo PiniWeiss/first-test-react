@@ -1,60 +1,35 @@
 import "./SearchArea.css";
-import teroristsData from "../terrorists_data.json";
-function SearchArea({ setFilter, allTerorists, setAllTerorist }) {
-  function searchingByName(e) {
-    setAllTerorist(
-      allTerorists.map((terorist) => {
-        terorist?.name?.toLowerCase().includes(e.target.value.toLowerCase());
-      }),
-    );
-    console.log(allTerorists)
-  }
 
-  function searchingByNumber(e) {
-    console.log(allTerorists.filter((t) => t.attacksCount === e.target.value))
-    setAllTerorist(
-      allTerorists.find((t) => t.attacksCount === e.target.value)
-    );
-  }
-
+function SearchArea({ setSearchName, setMinAttacks, setStatusFilter, onFindDangerous }) {
   return (
     <div id="search-area">
-      <div id="name-s-area">
-        <input
-          id="name-search"
-          type="text"
-          placeholder="🔍 Search by name"
-          onChange={searchingByName}
+      <input
+        type="text"
+        placeholder="🔍 Search by name"
+   onChange={(e) => setSearchName(e.target.value)} // עדכון טקסט חיפוש [cite: 15]
+      />
+      
+      <div id="attacks-s-area">
+        <label>Min Attacks:</label>
+        <input 
+          type="number" 
+  onChange={(e) => setMinAttacks(Number(e.target.value))} // חיפוש לפי כמות [cite: 16]
         />
       </div>
-      <div id="attecks-s-area">
-        <label htmlFor="attecks-s">Search by Attecks:</label>
-        <input id="attecks-s" type="number" onChange={searchingByNumber} />
-      </div>
+
       <div id="status-area">
-        <label htmlFor="status">Status Filter: </label>
-        <select name="status" id="">
+        <label>Status:</label>
+        <select onChange={(e) => setStatusFilter(e.target.value)}> 
           <option value="all">All</option>
-          <option value="active" onChange={() => setFilter("Active")}>
-            Active
-          </option>
-          <option value="quit" onChange={() => setFilter("Quit")}>
-            Quit
-          </option>
-          <option value="dead" onChange={() => setFilter("Dead")}>
-            Dead
-          </option>
-          <option
-            value="israeli-agent"
-            onChange={() => setFilter("Israeli-agent")}
-          >
-            Israeli Agent
-          </option>
+          <option value="active">Active</option>
+          <option value="quiet">Quiet</option>
+          <option value="dead">Dead</option>
+          <option value="agent">Israeli Agent</option>
         </select>
       </div>
-      <button>Find Most Dangerous</button>
+
+      <button onClick={onFindDangerous}>Find Most Dangerous</button> 
     </div>
   );
 }
-
 export default SearchArea;
