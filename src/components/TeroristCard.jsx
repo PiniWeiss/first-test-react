@@ -1,3 +1,5 @@
+const DEAFULT_IMAGE = "https://w7.pngwing.com/pngs/981/645/png-transparent-default-profile-united-states-computer-icons-desktop-free-high-quality-person-icon-miscellaneous-silhouette-symbol.png"
+
 function TeroristCard({ terorist, isHighlighted }) {
   return (
     <tr 
@@ -5,7 +7,7 @@ function TeroristCard({ terorist, isHighlighted }) {
       
     >
       <td className="name-area">
-        <img src={terorist.imageUrl || "default-img.png"} alt="terrorist" />
+        <img src={terorist.imageUrl || DEAFULT_IMAGE} alt="terrorist" />
         <h2>{terorist.name}</h2>
       </td>
       <td>{terorist.organization}</td>

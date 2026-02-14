@@ -21,7 +21,7 @@
         "attacksCount": 6,
         "status": "quiet",
         "relationToIsraelSummary": "Previously involved in logistics; currently low visibility andavoids direct contact.",
-        "imageUrl": "https://i.ibb.co/LDt5Kcgw/29.png"
+        "imageUrl": null
     },
     {
         "name": "Odeh Kanaan",
@@ -61,7 +61,7 @@
         "attacksCount": 5,
         "status": "quiet",
         "relationToIsraelSummary": "Supports supply movement and keeps communicationsminimal.",
-        "imageUrl": "https://i.ibb.co/LDt5Kcgw/29.png"
+        "imageUrl": null
     },
     {
         "name": "Hatem Nusseibeh",
@@ -93,7 +93,7 @@
         "attacksCount": 9,
         "status": "dead",
         "relationToIsraelSummary": "Former local coordinator; confirmed dead and no longerrelevant operationally.",
-        "imageUrl": "https://i.ibb.co/LDt5Kcgw/29.png"
+        "imageUrl": null
     },
     {
         "name": "Kareem Nassar",
@@ -133,7 +133,7 @@
         "attacksCount": 12,
         "status": "active",
         "relationToIsraelSummary": "Supports recruitment and financial transfers through informalnetworks.",
-        "imageUrl": "https://i.ibb.co/LDt5Kcgw/29.png"
+        "imageUrl": null
     },
     {
         "name": "Yousef Barakat",
@@ -157,7 +157,7 @@
         "attacksCount": 25,
         "status": "active",
         "relationToIsraelSummary": "High coordination capacity; manages multiple safe locationsand couriers.",
-        "imageUrl": "https://i.ibb.co/LDt5Kcgw/29.png"
+        "imageUrl": null
     },
     {
         "name": "Bilal Shukri",
@@ -173,7 +173,7 @@
         "attacksCount": 20,
         "status": "active",
         "relationToIsraelSummary": "Coordinates planning across small teams and uses rotatingcommunication channels.",
-        "imageUrl": "https://i.ibb.co/LDt5Kcgw/29.png"
+        "imageUrl": null
     },
     {
         "name": "Suhail Rashed",
@@ -197,7 +197,7 @@
         "attacksCount": 7,
         "status": "quiet",
         "relationToIsraelSummary": "Previously handled meeting logistics; now avoids contact andstays dormant.",
-        "imageUrl": "https://i.ibb.co/LDt5Kcgw/29.png"
+        "imageUrl": null
     },
     {
         "name": "Munir Haddad",
@@ -237,7 +237,7 @@
         "attacksCount": 11,
         "status": "active",
         "relationToIsraelSummary": "Handles recruitment channels and coordinates discreetmeetups.",
-        "imageUrl": "https://i.ibb.co/LDt5Kcgw/29.png"
+        "imageUrl": null
     },
     {
         "name": "Omar Qassem",
@@ -285,7 +285,7 @@
         "attacksCount": 18,
         "status": "active",
         "relationToIsraelSummary": "Attempts to expand influence and coordinate intimidationcampaigns.",
-        "imageUrl": "https://i.ibb.co/LDt5Kcgw/29.png" 
+        "imageUrl": null 
     },
     {
         "name": "Ziad Farraj",
