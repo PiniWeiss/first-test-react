@@ -1,8 +1,8 @@
-function TeroristCard({ terorist, isHighlighted, onClick }) {
+function TeroristCard({ terorist, isHighlighted }) {
   return (
     <tr 
       className={`row-animate ${isHighlighted ? 'highlight' : ''}`} 
-      onClick={onClick} // חשוב מאוד לבונוס!
+      
     >
       <td className="name-area">
         <img src={terorist.imageUrl || "default-img.png"} alt="terrorist" />
