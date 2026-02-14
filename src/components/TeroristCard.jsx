@@ -1,3 +1,4 @@
+import './TerroristCard.css'
 const DEAFULT_IMAGE = "https://w7.pngwing.com/pngs/981/645/png-transparent-default-profile-united-states-computer-icons-desktop-free-high-quality-person-icon-miscellaneous-silhouette-symbol.png"
 
 function TeroristCard({ terorist, isHighlighted }) {
